@@ -21,7 +21,7 @@ body, html{
   left: 35%;
   top: 20%;
   height: 50%;
-  width: 30%;
+  width: 45%;
 
 }
 
@@ -34,6 +34,8 @@ body, html{
   vertical-align: middle;
 
   left: 50%;
+  width: 70%;
+  margin: 0 auto;
 
   z-index: 110;
   border-style: solid;
@@ -45,7 +47,7 @@ body, html{
 
 .content{
   margin-top: 20px;
-  width: 140%;
+
 
   font-family: "BitstreamVeraSansMono";
   font-size: 20px;
@@ -74,4 +76,8 @@ p{
 
   margin-bottom: 5%;
 
+}
+
+.form-button:hover{
+  opacity: 0.75;
 }
