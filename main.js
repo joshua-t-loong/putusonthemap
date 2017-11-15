@@ -1,19 +1,9 @@
 $(document).ready(function(){
-  $( window ).resize(function() {
-    var width = $(".parent").width();
-    if(width <  715)
-    {
-      var left = Math.round((width - 410) / 12.5) + "%";
-      if(left < 0){
-        left = "0%";
-      }
+  recenterContent();
 
-      $(".subparent").css("left",left);
-    }
-    else{
-      $(".subparent").css("left","25%");
-      $(".subparent").css("top", "20%");
-    }
+
+  $( window ).resize(function() {
+    recenterContent();
   });
 
 
@@ -26,3 +16,24 @@ $(document).ready(function(){
 
 
 });
+
+function recenterContent(){
+  var width = $(".parent").width();
+  if(width <  715)
+  {
+    var left = Math.round((width - 410) / 12.5) + "%";
+    var top =  20 + Math.round((width - 410) / 43.5) + "%";
+    if(left < 0){
+      left = "0%";
+    }
+
+    $(".subparent").css("left",left);
+    $(".subparent").css("right",left);
+    $(".subparent").css("top", top)
+
+  }
+  else{
+    $(".subparent").css("left","25%");
+    $(".subparent").css("top", "27%");
+  }
+};
